@@ -1,5 +1,4 @@
 [org 0x7c00]
-
 ;print welcome message
 mov bx, MSG_Welcome
 call print16
@@ -28,6 +27,7 @@ call print32
 mov edx, VideoMemAddr + 160
 mov ebx, MSG_Kernel_Load
 call print32
+call 0x1000			;jump to kernel_entry
 
 jmp $				;prevent shit from happening by looping
 
