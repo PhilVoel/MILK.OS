@@ -2,7 +2,7 @@
 disk_load: 
 	mov [boot_drive], dl
 	mov bx, 0x1000		;moving disk to 0x9000
-	mov dh, 15		;number of sectors to load
+	mov dh, 0x9		;number of sectors to load
 	mov dl, [boot_drive]
 	push dx
 	mov ah, 2
