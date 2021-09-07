@@ -1,6 +1,7 @@
 ;strings
-MSG_Welcome	db "Welcome to MILK.OS", 10, 13, "Please wait while we initialize the system.", 10, 13, "Reading disk...", 10, 13, 0
+MSG_Welcome	db "Welcome to MILK.OS", 10, 13, "Reading disk...", 10, 13, 0
 MSG_Disk_Error	db "Error while reading disk.", 10, 13, 0
+MSG_Disk_Yay	db "Disk sucessfully read.", 10, 13, "Initializing GDT...", 10, 13, 0
 MSG_GDT		db "GDT successfully initialized.", 10, 13, "Switching to 32-bit Protected Mode...", 0
 MSG_PM		db "Protected Mode successfully loaded.", 0
 MSG_Kernel_Load	db "Loading Kernel...", 0
