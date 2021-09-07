@@ -9,7 +9,7 @@ mov sp, bp
 
 ;load disk and test
 call disk_load
-mov bx, 0x9000
+mov bx, MSG_Disk_Yay
 call print16
 
 ;switch to protected mode
@@ -40,5 +40,3 @@ jmp $				;prevent shit from happening by looping
 
 times 510-($-$$) db 0		;fill rest with 0s
 dw 0xaa55			;magic number tells BIOS that this is a boot sector
-
-db "Disk successfully read.", 10, 13, "Initializing GDT...", 10, 13, 0 ;will be printed after loading disk
