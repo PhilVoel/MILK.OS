@@ -11,7 +11,7 @@ clear:
 	rm -f *.bin *.o os-image
 
 kernel: kernel_entry kernel.o
-	ld -o kernel.bin -Ttext 0x1000 kernel_entry.o kernel.o --oformat binary
+	ld -o kernel.bin -Ttext 0x1000 kernel_entry.o kernel.o --oformat binary -e main
 
 kernel_entry: kernel/kernel_entry.asm
 	nasm $< -f elf64 -o $@.o
