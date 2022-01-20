@@ -17,4 +17,4 @@ kernel_entry: kernel/kernel_entry.asm
 	nasm $< -f elf64 -o $@.o
 
 kernel.o: kernel/kernel.c
-	gcc -ffreestanding -c $< -o $@ -masm=intel
+	gcc -ffreestanding -c $< -o $@ -masm=intel -fno-stack-protector
